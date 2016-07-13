@@ -3,7 +3,7 @@ server 'ec2-54-218-1-47.us-west-2.compute.amazonaws.com', port: 3000, roles: [:w
 
 set :repo_url,        'https://github.com/sathibabu-nyros/Testtask'
 set :application,     'Testtask'
-set :user,            'ubuntu'
+# set :user,            'ubuntu'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
