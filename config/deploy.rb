@@ -16,8 +16,8 @@ set :deploy_to, "/home/ubuntu/Testtask"
 set :pty, true
 
 
-# set :linked_files, %w{config/database.yml config/application.yml}
-# set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
+set :linked_files, %w{config/database.yml config/application.yml}
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 set :keep_releases, 2
 
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
