@@ -1,0 +1,49 @@
+<div class="row">     
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">User Profie
+              <%= link_to 'Log Out', destroy_user_session_path, method: :delete , class: 'pull-right' %></h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center"> <%= image_tag current_user.avatar.url(:original), :class => 'img-circle img-responsive' %></div>
+                
+              
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>FirstName</td>
+                        <td><%=current_user.firstname%></td>
+                      </tr>
+                       <tr>
+                        <td>LastName</td>
+                        <td><%=current_user.lastname%></td>
+                      </tr>
+                      <tr>
+                        <td>Email</td>
+                        <td><a href="#"><%=current_user.email%></a></td>
+                      </tr>
+                        <td>Phone Number</td>
+                        <td><%=current_user.phone_no%> </td>                           
+                      </tr>
+                      <tr>
+                        <td>Home Address</td>
+                        <td><%=current_user.address%></td>
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+                 <div class="panel-footer">
+                 <%#= link_to 'Log Out', edit_user_registration_path, method: :delete , class: 'pull-right' %>
+                        <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-edit"></i></a>
+                      
+                    </div>
+            
+          </div>
+        </div>
+      </div>

@@ -1,0 +1,14 @@
+development:
+  access_key_id: AKIAIRCOFIJZN3VJB6RA
+  secret_access_key: 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
+  bucket: nyros-bizzcloud
+test:
+  access_key_id: AKIAIRCOFIJZN3VJB6RA
+  secret_access_key: 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
+  bucket: nyros-bizzcloud
+production:
+  access_key_id: AKIAIRCOFIJZN3VJB6RA
+  secret_access_key: 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
+  bucket: nyros-bizzcloud
+
+

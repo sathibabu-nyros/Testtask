@@ -1,0 +1,29 @@
+ <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-user"></span> SignUp</div>
+            <div class="panel-body">
+			<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+			  <%= f.error_notification %>
+
+			  <div class="form-inputs">
+			    <%= f.input :firstname, required: true, autofocus: true %>
+			    <%= f.input :lastname, required: true %>
+			    <%= f.input :email, required: true, autofocus: true %>
+			    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+			    <%= f.input :password_confirmation, required: true %>
+			    <%= f.input :phone_no, required: true %>
+			    <%= f.input :address, required: true %>
+			    <%= f.input :avatar, as: :file %>
+			  </div>
+
+			  <div class="form-actions">
+			    <%= f.button :submit, "Sign up" %>
+			  </div>
+			<% end %>
+
+			<%= render "devise/shared/links" %>
+		</div>
+	</div>
+</div>			
