@@ -10,6 +10,7 @@ class User < ApplicationRecord
     :s3_region => 'us-east-1',    
     :s3_credentials => "#{Rails.root}/config/aws.yml",
     :path => "users/:id/:style.:extension"
+    
 
   validates :email, :password, :password_confirmation, :firstname, :lastname, :phone_no, :address, presence: true  
   validates :email, :phone_no,  uniqueness: true   
