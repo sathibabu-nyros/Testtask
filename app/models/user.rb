@@ -7,10 +7,11 @@ class User < ApplicationRecord
   # s3 bucket storage configuration 
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" },
     :storage => :s3,   
+    :url =>':s3_domain_url',
     :s3_region => 'us-east-1',    
     :s3_credentials => "#{Rails.root}/config/aws.yml",
     :path => "users/:id/:style.:extension"
-    
+
 
   validates :email, :password, :password_confirmation, :firstname, :lastname, :phone_no, :address, presence: true  
   validates :email, :phone_no,  uniqueness: true   
