@@ -20,8 +20,9 @@ gem 'coffee-rails', '~> 4.2'
 gem 'devise', '~> 4.2'
 # for image upload
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
-gem 'aws-sdk', '~> 2'
 # for s3 upload
+gem 'aws-sdk', '~> 2'
+
 
 
 # for app deploy
